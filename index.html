@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Leo Lin (林庭弘) 的個人網頁 - 國立中興大學 人工智慧與資訊安全課程作業">
+  <title>Leo Lin (林庭弘) | 人工智慧與資訊安全</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Dynamic Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="page-wrapper">
+    <!-- Navigation / Header -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <div class="logo">
+          <span class="logo-badge">NCHU</span>
+          <span class="logo-text">AI & InfoSec</span>
+        </div>
+        <div class="status-indicator">
+          <span class="pulse-dot"></span>
+          <span class="status-text">System Online</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-content container">
+      <!-- Hero Card -->
+      <section class="hero-section">
+        <div class="hero-badge">
+          <span class="icon">⚡</span>
+          <span>國立中興大學 人工智慧與資訊安全課程</span>
+        </div>
+        
+        <h1 class="hero-title" id="user-name">
+          Leo Lin <span class="name-chinese">(林庭弘)</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          熱衷於探索 <strong class="highlight-ai">人工智慧</strong> 與 <strong class="highlight-sec">資訊安全</strong> 的交會領域，致力於打造兼具智慧與安全性的現代化數位系統。
+        </p>
+
+        <!-- Live Clock Component -->
+        <div class="clock-card" id="clock-widget">
+          <div class="clock-header">
+            <div class="clock-label">
+              <span class="clock-icon">🕒</span>
+              <span>LIVE SYSTEM TIME (即時系統時間)</span>
+            </div>
+            <div class="clock-controls">
+              <button id="format-toggle-btn" class="format-btn" title="切換 12/24 小時制">24H</button>
+            </div>
+          </div>
+
+          <div class="clock-body">
+            <!-- Digital Time Display -->
+            <div class="time-display" id="time-display">
+              <span class="time-part" id="hours">00</span>
+              <span class="time-colon">:</span>
+              <span class="time-part" id="minutes">00</span>
+              <span class="time-colon">:</span>
+              <span class="time-part" id="seconds">00</span>
+              <span class="time-period" id="period"></span>
+            </div>
+
+            <!-- Date and Timezone Info -->
+            <div class="date-display">
+              <span id="full-date" class="date-text">載入日期中...</span>
+              <span class="separator">/</span>
+              <span id="day-of-week" class="day-text">星期 -</span>
+              <span class="separator">/</span>
+              <span id="timezone-text" class="timezone-text">UTC+8 (台北)</span>
+            </div>
+
+            <!-- Seconds Progress Bar -->
+            <div class="seconds-progress-container" title="當前分鐘進度">
+              <div class="seconds-progress-bar" id="seconds-bar"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Tags -->
+        <div class="tags-container">
+          <span class="tag tag-ai">🤖 人工智慧 (AI)</span>
+          <span class="tag tag-sec">🛡️ 資訊安全 (InfoSec)</span>
+          <span class="tag tag-web">💻 現代化網頁開發</span>
+          <span class="tag tag-code">⚡ 演算法與系統分析</span>
+        </div>
+      </section>
+
+      <!-- Info Cards Grid -->
+      <section class="info-grid">
+        <!-- Card 1: 課程簡介 -->
+        <div class="info-card">
+          <div class="card-icon">📚</div>
+          <h2 class="card-title">課程資訊</h2>
+          <p class="card-desc">國立中興大學「人工智慧與資訊安全」專題實作與理論課程，涵蓋機器學習安全、威脅建模、防禦機制與安全系統架構。</p>
+        </div>
+
+        <!-- Card 2: 關於作者 -->
+        <div class="info-card">
+          <div class="card-icon">👨‍💻</div>
+          <h2 class="card-title">關於我</h2>
+          <p class="card-desc">我是 Leo Lin (林庭弘)，本網頁為個人的課程首頁與作業專案成果展示平台，持續紀錄學習軌跡與實作專案。</p>
+        </div>
+
+        <!-- Card 3: 專案連結 -->
+        <div class="info-card">
+          <div class="card-icon">🚀</div>
+          <h2 class="card-title">原始碼與倉庫</h2>
+          <p class="card-desc">本專案程式碼已託管於 GitHub，支援 GitHub Pages 自動化佈署。</p>
+          <a href="https://github.com/contemplator/nchu-personal-page" target="_blank" rel="noopener noreferrer" class="card-link">
+            檢視 GitHub 倉庫 &rarr;
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <p>&copy; 2026 Leo Lin (林庭弘) · 國立中興大學 人工智慧與資訊安全課程作業</p>
+        <p class="footer-sub">Designed & Built with modern HTML, CSS, and Vanilla JS</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
