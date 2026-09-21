@@ -9,10 +9,21 @@
 本網頁旨在結合課程所學之 **人工智慧 (AI)** 與 **資訊安全 (Information Security)** 概念，設計並建立一個現代化、響應式（Responsive）的個人展示網頁。
 
 ### 🌟 核心特色
+
 - **現代化介面設計**：乾淨俐落的 UI/UX 設計與響應式排版（支援電腦與手機版面）。
 - **個人經歷與技能展示**：包含簡介、學歷背景、專業技能（AI / 資安 / 軟體開發）。
 - **課程專案與作業展示**：整理課程中的各項作業、實作與研究專案。
 - **資安與最佳實踐**：注重前端安全（如避免 XSS、妥善設定資源連結與安全標頭等）。
+
+---
+
+## 🔗 Live Demo
+
+- **線上網址**：[Leo Lin (林庭弘) | 人工智慧與資訊安全 個人網頁作業](https://contemplator.github.io/nchu-personal-page/)
+
+### 📸 Live Demo Preview
+
+![Live Demo Preview](assets/images/live-demo.png)
 
 ---
 
@@ -34,7 +45,8 @@ nchu-personal-page/
 ├── js/                 # 腳本檔案目錄
 │   └── main.js         # 主要 JavaScript 邏輯
 ├── assets/             # 靜態資源目錄
-│   ├── images/         # 圖片資源 (頭像、專案截圖等)
+│   ├── images/         # 圖片資源目錄
+│   │   └── live-demo.png # 線上展示截圖預覽 (可自行替換)
 │   └── docs/           # 相關文件或報告
 └── README.md           # 專案說明文件
 ```
